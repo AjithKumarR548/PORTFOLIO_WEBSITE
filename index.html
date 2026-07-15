@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Ajith Kumar</title>
+</head>
+<body>
+    <!--NAVIGATION-->
+    <nav> 
+        <a href="#about">About</a>
+        
+        <a href="#skills">Skills</a>
+        
+        <a href="#projects">Projects</a>
+        
+        <a href="#contact">Contact</a>
+        
+    </nav>
+
+    <!--HERO SECTION-->
+    <header>
+        <h1>Hi, I'm Ajith Kumar</h1>
+        <p>I'm a passionate web developer from Bangalore</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </header>
+
+    <!--ABOUT SECTION-->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="/profile.jpeg" alt="Ajith Kumar's Profile Picture" width="200" height="200">
+        <p>I'm a web developer with a passion for creating beautiful and functional websites.</p>
+    </section>
+
+    <!--SKILLS SECTION-->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ol>
+    </section>
+
+    <!--PROJECTS SECTION-->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <p>A simple web application built with HTML, CSS, and JavaScript.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+            <p>A responsive website built with React and styled-components.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>Description of Project 3.</p>
+            <p>A full-stack application built with Node.js, Express, and MongoDB.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+    </section>
+
+    <!--CONTACT SECTION-->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <!-- <p>Email: <a href="mailto:ajithajayajju123@gmail.com">ajithajayajju123@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/AjithKumarR548" target="_blank">github.com/ajithkumar</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ajith-kumar-r-468916421?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">linkedin.com/in/ajithkumar</a></p>  -->
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="">--Select a Topic--</option>
+                <option value="web development">I want to Hire You</option>
+                <option value="ui-ux-design">I want to collaborate on a UI/UX design project</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br><br>
+            <button type="submit">Send Message🚀</button>
+    </section>
+
+    <!--FOOTER SECTION-->
+    <footer>
+        <p>&copy; 2026 Ajith Kumar. All rights reserved.</p>
+    </footer>
+</body>
+</html>
