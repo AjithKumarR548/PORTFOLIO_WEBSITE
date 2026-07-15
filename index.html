@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--SEO Meta Tags-->
+    <meta name="description" content="Ajith Kumar's Portfolio - Web Developer from Bangalore. Showcasing skills, projects, and contact information.">
+    <meta name="keywords" content="Ajith Kumar, Portfolio, Web Developer, Bangalore, HTML, CSS, JavaScript, React, Projects">
+    <meta name="author" content="Ajith Kumar">
     <title>My Portfolio | Ajith Kumar</title>
+    
+    <!--Open Graph Meta Tags for social media sharing-->
+    <meta property="og:title" content="Ajith Kumar's Portfolio">
+    <meta property="og:description" content="Web Developer from Bangalore">
+    <meta property="og:image" content="profile.jpeg">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta property="og:type" content="website">
+    <!--Twitter Card Meta Tags-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ajith Kumar's Portfolio">
+    <meta name="twitter:description" content="Web Developer from Bangalore">
+    <meta name="twitter:image" content="profile.jpeg">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="favicon.jpg" alt="Favicon">
 </head>
 <body>
     <!--NAVIGATION-->
@@ -28,7 +47,10 @@
     <!--ABOUT SECTION-->
     <section id="about">
         <h2>About Me</h2>
-        <img src="/profile.jpeg" alt="Ajith Kumar's Profile Picture" width="200" height="200">
+        <figure>
+            <img src="profile.jpeg" alt="Ajith Kumar's Profile Picture" width="200" height="200">
+            <figcaption>Ajith Kumar R's Profile Picture</figcaption>
+        </figure>
         <p>I'm a web developer with a passion for creating beautiful and functional websites.</p>
     </section>
 
@@ -50,8 +72,13 @@
             <h3>Project 1</h3>
             <p>Description of Project 1.</p>
             <p>A simple web application built with HTML, CSS, and JavaScript.</p>
-            <a href="#" class="btn">View Project</a>
+            <a href="project1.html" class="btn" target="_blank">View Project</a>
+            <br><br>
+
+            <!--Embed Youtube Video(iframe)-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tqjJrXd27m4" frameborder="0" allowfullscreen></iframe>
         </div>
+        <hr>
 
         <div class="project-card">
             <h3>Project 2</h3>
