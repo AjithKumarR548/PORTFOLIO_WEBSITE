@@ -133,8 +133,7 @@ section h2::after{
     padding: 20px;
     flex: 1;
     display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
+    flex-direction: column;   
 }
 
 .btn{
