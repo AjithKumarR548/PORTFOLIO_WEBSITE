@@ -47,20 +47,27 @@ window.addEventListener('scroll', () =>{
 })
  
 // === ACTIVE NAV LINK on scroll ====
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-links a');
- 
-window.addEventListener('scroll', () =>{
-    let current ='';
-    sections.forEach(section =>{
-        if(window.scrollY >= section.offsetTop-100){
-            current=section.getAttribute('id');
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
         }
-    })
-    navItems.forEach(link =>{
-        link.classList.remove('active');
-        if(link.getAttribute('href') === `${current}`) {
-            link.classList.add('active');
+    });
+
+    navItems.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === `#${current}`) {  // use ` ` backiphone above tab ❌' ' single quotes
+            link.classList.add("active");
         }
-    })
-})
+    });
+});
