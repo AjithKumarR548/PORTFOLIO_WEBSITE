@@ -7,6 +7,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+.site-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--primary);
+    transition: background 0.3s ease, box-shadow 0.3s ease; /*Day 9*/
+}
 /*CSS Custom Properties(variables)- DRY principle*/
 :root {
     --primary: #1B4F72;
@@ -70,6 +81,11 @@ section h2::after{
 }
 .nav-links a:hover{
     color: var(--accent);
+}
+.nav-links a.active{
+    color: var(--accent);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
 }
 /* HERO SECTION */
 .hero-section{
@@ -320,4 +336,7 @@ section h2::after{
 .nav-links.open{
  display:flex;
  }
+}
+.site-header.scrolled{
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
