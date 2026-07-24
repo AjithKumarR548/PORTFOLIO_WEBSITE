@@ -33,7 +33,7 @@
 </head>
 <body>
     <!-- HEADER + NAVIGATION -->
-     <header class="site-header">
+    <header class="site-header">
         <nav class="navbar">
             <div class="logo">AK</div>
             <ul class="nav-links">
@@ -50,7 +50,7 @@
                ☰
               </button>
         </nav>
-     </header>
+    </header>
     <!--Main Content-->
     <main>
         <!-- HERO SECTION -->
@@ -90,6 +90,12 @@
         <!-- PROJECTS SECTION -->
         <section id="projects" class="projects-section">
             <h2>My Projects</h2>
+            <div class= "project-filters">
+                <!--The data-filter attribute is what our JS will read-->
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="web">Web</button>
+                <button class="filter-btn active" data-filter="design">Design</button>
+            </div>
             <div class="projects-grid">
                 <article class="project-card" data-category="web">
                     <img src="photos/weather app.avif" alt="weather app" width="200" height="200">
@@ -129,17 +135,17 @@
                 <button type="submit" class="btn btn-primary">Send Message</button>
              </form>
         </section>
-
-        <!-- FOOTER SECTION -->
-        <footer class="site-footer">
-                <p>&copy; <span class="footer-year">1999</span> Ajith Kumar. All rights reserved.
-                Build with HTML, CSS, JS</p>
-                <nav arial-label="Social links">
-                 <p>GITHUB:<a href="https://github.com/AjithKumarR548" target="_blank">GitHub</a></p>
-                 <p>LinkedIn: <a href="https://www.linkedin.com/in/ajith-kumar-r-468916421?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">linkedin.com/in/ajithkumar</a></p>
-                </nav>
-        <footer>
-        <!--Linking Javascript-->
-        <script src="script.js"></script>
+    </main>
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+        <p>&copy; <span class="footer-year">1999</span> Ajith Kumar. All rights reserved.
+        Build with HTML, CSS, JS</p>
+        <nav arial-label="Social links">
+            <p>GITHUB:<a href="https://github.com/AjithKumarR548" target="_blank">GitHub</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ajith-kumar-r-468916421?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">linkedin.com/in/ajithkumar</a></p>
+        </nav>
+    <footer>
+    <!--Linking Javascript-->
+    <script src="script.js"></script>
 </body>
 </html>

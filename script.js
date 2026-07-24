@@ -22,8 +22,9 @@ function getGreeting(){
 const heroTitle = document.querySelector('.hero-section h1');
 console.log(heroTitle);
 if (heroTitle){
-    heroTitle.textContent = `${getGreeting()}, I'm Ajith Kumar 👋`;
+    heroTitle.textContent = `${getGreeting()}, I'm Ajith Kumar👋`;
 }
+ 
 // ==== MOBILE MENU TOGGLE ===
  
 const menuToggle = document.querySelector('.menu-toggle');
@@ -47,27 +48,60 @@ window.addEventListener('scroll', () =>{
 })
  
 // === ACTIVE NAV LINK on scroll ====
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        
-
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a');
+ 
+window.addEventListener('scroll', () =>{
+    let current ='';
+    sections.forEach(section =>{
+        if(window.scrollY >= section.offsetTop-100){
+            current=section.getAttribute('id');
         }
-    });
-
-    navItems.forEach(link => {
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${current}`) {  // use ` ` backiphone above tab ❌' ' single quotes
-            link.classList.add("active");
+    })
+    navItems.forEach(link =>{
+        link.classList.remove('active');
+        if(link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
         }
-    });
+    })
+})
+//Day 10 - Project Filter System
+const projects =[
+    { id: 1, name: "Weather App", category: "web", tech: ["React", "API"] },
+    { id: 2, name: "Todo App", category: "web", tech: ["JavaScript"] },
+    { id: 3, name: "Portfolio", category: "design", tech: ["HTML", "CSS"] },
+    { id: 4, name: "Calculator", category: "web", tech: ["JavaScript"] },
+ 
+];
+ 
+function renderProjects(filter="all") {
+    const grid = document.querySelector('.projects-grid');
+    const filtered = filter === "all"
+    ? projects
+    : projects.filter(p => p.category === filter);
+ 
+    grid.innerHTML = filtered.map(project =>
+        `<article class="project-card">
+        <div class="project-card-body">
+        <h3>${project.name}</h3>
+        <div class="project-tags">
+        ${project.tech.map(t => `<span class="tag">${t}</span>`).join('')}
+        </div>
+        <a href="#" class=" btn btn-primary">View Project</a>
+        </div>
+        </article>
+        `).join('');
+}
+ 
+//Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn =>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.filter-btn').forEach(b =>
+            b.classList.remove('active'));
+            btn.classList.add('active')
+            renderProjects(btn.dataset.filter);
 });
+    });
+ 
+//Intial render
+renderProjects();
